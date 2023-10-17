@@ -87,7 +87,7 @@ class HSRScanner:
             return
 
         return {
-            "source": "HSR_Scanner",
+            "source": "HSR_Relic",
             "version": 1,
             "light_cones": await asyncio.gather(*light_cones),
             "relics": await asyncio.gather(*relics),
@@ -440,7 +440,7 @@ class HSRScanner:
                 + (f' Got "{total_character_count}" instead.' if total_character_count else "")
                 + " Did you start the scan from the ESC menu?"
             )
-        character_count = 4
+        character_count = min(self._config["scan_character_relics_numbers"], total_character_count)
 
         # Update UI count
         if self.update_progress:

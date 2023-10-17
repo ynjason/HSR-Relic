@@ -327,8 +327,8 @@ RELIC_META_DATA = {
         "setKey": "Rutilant Arena",
         "slotKey": "Link Rope",
     },
-    "Insumousu's Frayed Hawser": {"setKey": "Broken Keel", "slotKey": "Planar Sphere"},
-    "Insumousu's Whalefall Ship": {"setKey": "Broken Keel", "slotKey": "Link Rope"},
+    "Insumousu's Frayed Hawser": {"setKey": "Broken Keel", "slotKey": "Link Rope"},
+    "Insumousu's Whalefall Ship": {"setKey": "Broken Keel", "slotKey": "Planar Sphere"},
     "Messenger's Holovisor": {
         "setKey": "Messenger Traversing Hackerspace",
         "slotKey": "Head",

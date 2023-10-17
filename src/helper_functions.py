@@ -1,7 +1,6 @@
 import sys
 import os
 import json
-import datetime
 import cv2
 import numpy as np
 import pytesseract
@@ -19,11 +18,10 @@ def executable_path(path):
     return os.path.join(os.path.dirname(sys.executable), path)
 
 
-def save_to_json(data, output_location):
+def save_to_json(data, output_location, file_name):
     if not os.path.exists(output_location):
         os.makedirs(output_location)
 
-    file_name = f"HSRScanData_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     with open(os.path.join(output_location, file_name), "w") as outfile:
         json.dump(data, outfile, indent=4)
 

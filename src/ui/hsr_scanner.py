@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'hsr_scanner.ui'
+# Form implementation generated from reading ui file 'src/ui/hsr_scanner.ui'
 #
 # Created by: PyQt6 UI code generator 6.4.2
 #
@@ -13,7 +13,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(700, 515)
+        MainWindow.resize(708, 538)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(parent=self.centralwidget)
         self.tabWidget.setEnabled(True)
-        self.tabWidget.setGeometry(QtCore.QRect(10, 10, 681, 491))
+        self.tabWidget.setGeometry(QtCore.QRect(10, 10, 681, 511))
         self.tabWidget.setAutoFillBackground(False)
         self.tabWidget.setTabPosition(QtWidgets.QTabWidget.TabPosition.North)
         self.tabWidget.setTabBarAutoHide(True)
@@ -222,6 +222,8 @@ class Ui_MainWindow(object):
         self.formGroupBox_2.setObjectName("formGroupBox_2")
         self.formLayout_5 = QtWidgets.QFormLayout(self.formGroupBox_2)
         self.formLayout_5.setObjectName("formLayout_5")
+        self.formLayout_6 = QtWidgets.QFormLayout()
+        self.formLayout_6.setObjectName("formLayout_6")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.checkBoxScanCharRelics = QtWidgets.QCheckBox(parent=self.formGroupBox_2)
@@ -231,8 +233,91 @@ class Ui_MainWindow(object):
         self.checkBoxCursorTesting.setEnabled(True)
         self.checkBoxCursorTesting.setObjectName("checkBoxCursorTesting")
         self.verticalLayout_2.addWidget(self.checkBoxCursorTesting)
-        self.formLayout_5.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.verticalLayout_2)
+        self.formLayout_6.setLayout(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.verticalLayout_2)
+        self.formLayout_7 = QtWidgets.QFormLayout()
+        self.formLayout_7.setFieldGrowthPolicy(QtWidgets.QFormLayout.FieldGrowthPolicy.AllNonFixedFieldsGrow)
+        self.formLayout_7.setObjectName("formLayout_7")
+        self.label_9 = QtWidgets.QLabel(parent=self.formGroupBox_2)
+        self.label_9.setEnabled(True)
+        self.label_9.setObjectName("label_9")
+        self.formLayout_7.setWidget(0, QtWidgets.QFormLayout.ItemRole.LabelRole, self.label_9)
+        self.spinBoxCharacterNumber = QtWidgets.QSpinBox(parent=self.formGroupBox_2)
+        self.spinBoxCharacterNumber.setEnabled(True)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.spinBoxCharacterNumber.sizePolicy().hasHeightForWidth())
+        self.spinBoxCharacterNumber.setSizePolicy(sizePolicy)
+        self.spinBoxCharacterNumber.setMinimum(1)
+        self.spinBoxCharacterNumber.setProperty("value", 4)
+        self.spinBoxCharacterNumber.setObjectName("spinBoxCharacterNumber")
+        self.formLayout_7.setWidget(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.spinBoxCharacterNumber)
+        self.formLayout_6.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.formLayout_7)
+        self.formLayout_5.setLayout(0, QtWidgets.QFormLayout.ItemRole.FieldRole, self.formLayout_6)
         self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.groupBox_6 = QtWidgets.QGroupBox(parent=self.tab_2)
+        self.groupBox_6.setGeometry(QtCore.QRect(440, 10, 231, 441))
+        self.groupBox_6.setObjectName("groupBox_6")
+        self.textEdit_2 = QtWidgets.QTextEdit(parent=self.groupBox_6)
+        self.textEdit_2.setGeometry(QtCore.QRect(10, 20, 211, 411))
+        self.textEdit_2.setReadOnly(True)
+        self.textEdit_2.setObjectName("textEdit_2")
+        self.groupBox_7 = QtWidgets.QGroupBox(parent=self.tab_2)
+        self.groupBox_7.setGeometry(QtCore.QRect(20, 110, 401, 81))
+        self.groupBox_7.setObjectName("groupBox_7")
+        self.gridLayoutWidget_2 = QtWidgets.QWidget(parent=self.groupBox_7)
+        self.gridLayoutWidget_2.setGeometry(QtCore.QRect(10, 20, 381, 54))
+        self.gridLayoutWidget_2.setObjectName("gridLayoutWidget_2")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.gridLayoutWidget_2)
+        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.pushButtonEvaluateOpenLocation = QtWidgets.QPushButton(parent=self.gridLayoutWidget_2)
+        self.pushButtonEvaluateOpenLocation.setObjectName("pushButtonEvaluateOpenLocation")
+        self.gridLayout_2.addWidget(self.pushButtonEvaluateOpenLocation, 1, 1, 1, 1)
+        self.pushButtonEvaluateChangeLocation = QtWidgets.QPushButton(parent=self.gridLayoutWidget_2)
+        self.pushButtonEvaluateChangeLocation.setObjectName("pushButtonEvaluateChangeLocation")
+        self.gridLayout_2.addWidget(self.pushButtonEvaluateChangeLocation, 1, 0, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.gridLayout_2.addItem(spacerItem1, 1, 2, 1, 1)
+        self.lineEditEvaluateOutputLocation = QtWidgets.QLineEdit(parent=self.gridLayoutWidget_2)
+        self.lineEditEvaluateOutputLocation.setObjectName("lineEditEvaluateOutputLocation")
+        self.gridLayout_2.addWidget(self.lineEditEvaluateOutputLocation, 0, 0, 1, 3)
+        self.groupBox_8 = QtWidgets.QGroupBox(parent=self.tab_2)
+        self.groupBox_8.setGeometry(QtCore.QRect(20, 20, 401, 81))
+        self.groupBox_8.setObjectName("groupBox_8")
+        self.gridLayoutWidget_3 = QtWidgets.QWidget(parent=self.groupBox_8)
+        self.gridLayoutWidget_3.setGeometry(QtCore.QRect(10, 20, 381, 54))
+        self.gridLayoutWidget_3.setObjectName("gridLayoutWidget_3")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.gridLayoutWidget_3)
+        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.lineEditEvaluateInputLocation = QtWidgets.QLineEdit(parent=self.gridLayoutWidget_3)
+        self.lineEditEvaluateInputLocation.setObjectName("lineEditEvaluateInputLocation")
+        self.gridLayout_3.addWidget(self.lineEditEvaluateInputLocation, 0, 0, 1, 2)
+        self.pushButtonChangeEvaluateInputLocation = QtWidgets.QPushButton(parent=self.gridLayoutWidget_3)
+        self.pushButtonChangeEvaluateInputLocation.setObjectName("pushButtonChangeEvaluateInputLocation")
+        self.gridLayout_3.addWidget(self.pushButtonChangeEvaluateInputLocation, 1, 0, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Minimum)
+        self.gridLayout_3.addItem(spacerItem2, 1, 1, 1, 1)
+        self.pushButtonStartEvaluate = QtWidgets.QPushButton(parent=self.tab_2)
+        self.pushButtonStartEvaluate.setGeometry(QtCore.QRect(20, 320, 111, 41))
+        self.pushButtonStartEvaluate.setObjectName("pushButtonStartEvaluate")
+        self.groupBox_9 = QtWidgets.QGroupBox(parent=self.tab_2)
+        self.groupBox_9.setGeometry(QtCore.QRect(20, 200, 241, 111))
+        self.groupBox_9.setObjectName("groupBox_9")
+        self.textEditEvaluateLog = QtWidgets.QPlainTextEdit(parent=self.groupBox_9)
+        self.textEditEvaluateLog.setGeometry(QtCore.QRect(10, 20, 221, 81))
+        self.textEditEvaluateLog.setReadOnly(True)
+        self.textEditEvaluateLog.setObjectName("textEditEvaluateLog")
+        self.label_10 = QtWidgets.QLabel(parent=self.tab_2)
+        self.label_10.setGeometry(QtCore.QRect(140, 330, 161, 16))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_10.setFont(font)
+        self.label_10.setObjectName("label_10")
+        self.tabWidget.addTab(self.tab_2, "")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -241,7 +326,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "HSR Scanner beta v0.2.3"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "HSR Relics"))
         self.formGroupBox.setTitle(_translate("MainWindow", "Items to scan"))
         self.checkBoxScanLightCones.setText(_translate("MainWindow", "Light Cones"))
         self.checkBoxScanRelics.setText(_translate("MainWindow", "Relics"))
@@ -280,7 +365,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:\'Segoe UI\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:12pt; font-weight:600; text-decoration: underline;\">HSR RELICS</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'MS Shell Dlg 2\'; font-size:8.25pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:600;\">- BETA -</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:600;\">- SCAN -</span></p>\n"
 "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'MS Shell Dlg 2\'; font-size:8.25pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; text-decoration: underline;\">HOW TO RUN</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt;\">1. Set resolution with aspect ratio 16:9 (such as 1920x1080)</span></p>\n"
@@ -288,11 +373,46 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt;\">3. Press the start scan button</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt;\">4. Don\'t move mouse during the scan process</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'MS Shell Dlg 2\'; font-size:8pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; text-decoration: underline;\">If running Character Relics</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">1. Set number of characters to scan</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">2. Make sure all characters have relics on them</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">3. Make sure the relics are all 4 or 5 rarity (purple/gold)</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'MS Shell Dlg 2\'; font-size:8pt;\"><br /></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:12pt; font-weight:600; text-decoration: underline;\">NOTES</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt; font-weight:600; color:#ff0000;\">- </span><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt; color:#ff0000;\">The inventory screen is translucent and overall accuracy can be influenced by poor text contrast. </span><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt; font-weight:600; color:#ff0000;\">Make sure you\'re not looking at anything bright before starting the scan.</span></p></body></html>"))
         self.label.setText(_translate("MainWindow", "Press ENTER to cancel"))
         self.groupBox_5.setTitle(_translate("MainWindow", "Log"))
-        self.formGroupBox_2.setTitle(_translate("MainWindow", "Testing Options"))
+        self.formGroupBox_2.setTitle(_translate("MainWindow", "Character Relics"))
         self.checkBoxScanCharRelics.setText(_translate("MainWindow", "Character Relics"))
         self.checkBoxCursorTesting.setText(_translate("MainWindow", "Cursor Testing"))
+        self.label_9.setText(_translate("MainWindow", "# of Characters to Scan"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Scan"))
+        self.groupBox_6.setTitle(_translate("MainWindow", "Info"))
+        self.textEdit_2.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:\'Segoe UI\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:12pt; font-weight:600; text-decoration: underline;\">HSR RELICS</span></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'MS Shell Dlg 2\'; font-size:8.25pt;\"><br /></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:600;\">- EVALUATE -</span></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'MS Shell Dlg 2\'; font-size:8.25pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; text-decoration: underline;\">HOW TO RUN</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt;\">1. In Scan tab run a Character Scan with any number of characters</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt;\">2. Upload downloaded Json file into evaluate input box</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt;\">3. Make sure Output location is reachable</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:8pt;\">3. Click Evaluate</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'MS Shell Dlg 2\'; font-size:8pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'MS Shell Dlg 2\'; font-size:8pt;\"><br /></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+        self.groupBox_7.setTitle(_translate("MainWindow", "Output location"))
+        self.pushButtonEvaluateOpenLocation.setText(_translate("MainWindow", "Open Folder"))
+        self.pushButtonEvaluateChangeLocation.setText(_translate("MainWindow", "Change"))
+        self.groupBox_8.setTitle(_translate("MainWindow", "Input Location"))
+        self.pushButtonChangeEvaluateInputLocation.setText(_translate("MainWindow", "Change"))
+        self.pushButtonStartEvaluate.setText(_translate("MainWindow", "Evaluate"))
+        self.groupBox_9.setTitle(_translate("MainWindow", "Log"))
+        self.label_10.setText(_translate("MainWindow", "Press ENTER to cancel"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Evaluate"))

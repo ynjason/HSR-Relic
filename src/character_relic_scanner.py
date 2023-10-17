@@ -117,11 +117,12 @@ class CharacterRelicScanner:
 
         for relic in stats_dict["relics"]:
             parsed_relic = {}
+            mainStatPercent = False
             for key in relic:
                 parsed_relic[key] = self.extract_stats_data(key, relic[key])
             if parsed_relic["mainStatVal"][1] == True:
                 parsed_relic["mainStatVal"] = parsed_relic["mainStatVal"][0]
-                parsed_relic["mainStatKey"] += "_"
+                mainStatPercent = True
             else:
                 parsed_relic["mainStatVal"] = parsed_relic["mainStatVal"][0]
 
@@ -135,6 +136,9 @@ class CharacterRelicScanner:
             # Fix OCR errors
             name, _ = get_closest_relic_name(name)
             mainStatKey, _ = get_closest_relic_main_stat(mainStatKey)
+
+            if mainStatPercent:
+                mainStatKey += "_"
 
             if mainStatKey == "":
                 self._logger.emit(

@@ -6,7 +6,7 @@ Easily export light cones, relics, and character data from Honkai: Star Rail to 
 
 If you haven't already, download and install [Microsoft Visual C++ Redistributable for Visual Studio 2015-2022](https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-studio-2015-2017-2019-and-2022) (x86 or x64 depending on system).
 
-[Download latest HSR Relic](https://https://github.com/ynjason/HSR-Relic/releases/latest) and then run as administrator (required to simulate keyboard and mouse presses).
+[Download latest HSR Relic](https://github.com/ynjason/HSR-Relic/releases/latest) and then run as administrator (required to simulate keyboard and mouse presses).
 
 ## Instructions
 

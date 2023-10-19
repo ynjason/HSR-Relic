@@ -51,7 +51,7 @@ class HSRRelicEvaluator:
         rarity = relic["rarity"]
 
         # If relic is not rarity 4 or 5 then skip
-        if rarity not in ["4", "5"]:
+        if str(rarity) not in ["4", "5"]:
             return relic
 
         total_effective_stats = 0

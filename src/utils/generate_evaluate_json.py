@@ -145,7 +145,7 @@ def generate_sub_stats(current_list, current_value, key, rarity, map, depth):
             return
 
     depth += 1
-    rounded_value = round(current_value, 1)
+    rounded_value = round(float(current_value), 1)
     # if rounded_value in map:
     #     if len(current_list) not in [len(x) for x in map[rounded_value]]:
     #         map[rounded_value].append(current_list)
